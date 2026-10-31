@@ -1,0 +1,1 @@
+## Integracion de programa MiniSO en C++ y QT Creator
