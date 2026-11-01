@@ -1,0 +1,1 @@
+Documento de demostración de MiniFileManager. No se escribe fuera de este árbol controlado.
