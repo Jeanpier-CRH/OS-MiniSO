@@ -1,0 +1,21 @@
+Test project /home/jeanpier/Documents/UNJBG/Projects/MiniSO-Lab/build
+    Start 1: test_processes
+1/8 Test #1: test_processes ...................   Passed    0.01 sec
+    Start 2: test_scheduler
+2/8 Test #2: test_scheduler ...................   Passed    0.01 sec
+    Start 3: test_partition
+3/8 Test #3: test_partition ...................   Passed    0.01 sec
+    Start 4: test_paging
+4/8 Test #4: test_paging ......................   Passed    0.01 sec
+    Start 5: test_swap
+5/8 Test #5: test_swap ........................   Passed    0.01 sec
+    Start 6: test_oom
+6/8 Test #6: test_oom .........................   Passed    0.01 sec
+    Start 7: test_concurrency
+7/8 Test #7: test_concurrency .................   Passed    0.01 sec
+    Start 8: test_integration
+8/8 Test #8: test_integration .................   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Total Test time (real) =   0.09 sec
