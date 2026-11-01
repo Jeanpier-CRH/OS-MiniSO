@@ -1,0 +1,63 @@
+Open MiniBrowser: ok pid=100
+Process tree:
+PID 1 MiniKernel [READY]
+PID 2 MemoryManager [READY]
+PID 3 ProcessScheduler [READY]
+PID 4 EventLogger [READY]
+PID 5 DesktopService [READY]
+PID 100 MiniBrowser [READY]
+PID 101 Tab Inicio [READY]
+PID 102 Tab Noticias [READY]
+PID 103 Tab Documentacion [READY]
+PID 6 ThreadMonitor [READY]
+Closed tab Noticias pid=102
+Frames after recycle:
+frame 0: pid=1 page=0
+frame 1: pid=2 page=0
+frame 2: pid=3 page=0
+frame 3: pid=4 page=0
+frame 4: pid=5 page=0
+frame 5: pid=6 page=0
+frame 6: pid=100 page=0
+frame 7: pid=100 page=1
+frame 8: pid=101 page=0
+frame 9: pid=104 page=0
+frame 10: pid=103 page=0
+frame 11: FREE
+frame 12: FREE
+frame 13: FREE
+frame 14: FREE
+frame 15: FREE
+frame 16: FREE
+frame 17: FREE
+frame 18: FREE
+frame 19: FREE
+frame 20: FREE
+frame 21: FREE
+frame 22: FREE
+frame 23: FREE
+frame 24: FREE
+frame 25: FREE
+frame 26: FREE
+frame 27: FREE
+frame 28: FREE
+frame 29: FREE
+frame 30: FREE
+frame 31: FREE
+Paging does not require contiguous frames.
+
+MiniRenderer pid=105 checksum=243 recovered=1
+
+produced=20 consumed=20 finished=1 valid=1
+
+PID 1 MiniKernel [READY]
+PID 2 MemoryManager [READY]
+PID 3 ProcessScheduler [READY]
+PID 4 EventLogger [READY]
+PID 5 DesktopService [READY]
+PID 100 MiniBrowser [READY]
+PID 101 Tab Inicio [READY]
+PID 103 Tab Documentacion [READY]
+PID 104 Tab Nueva [READY]
+PID 6 ThreadMonitor [READY]
+PID 105 MiniRenderer [READY]

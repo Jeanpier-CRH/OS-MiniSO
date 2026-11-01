@@ -1,0 +1,6 @@
+{"runnerPid":105110,"runnerPpid":89391}
+{"pid":105111,"ppid":105110,"message":"process_child running","exitCode":0}
+{"pid":105112,"ppid":105110,"message":"process_child running","exitCode":3}
+{"pid":105111,"ppid":105110,"exitCode":0,"execFailed":false}
+{"pid":105112,"ppid":105110,"exitCode":3,"execFailed":false}
+{"pid":105113,"ppid":105110,"exitCode":42,"execFailed":true}
