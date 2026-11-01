@@ -1,0 +1,59 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+out/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+Testing/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# Object files
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+
+# Executables
+*.exe
+*.out
+
+# Debug files
+*.dSYM/
+*.gcda
+*.gcno
+
+# Qt Creator
+*.user
+*.user.*
+*.autosave
+*.config
+
+# Qt build directories
+build-*/
+cmake-build-*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
