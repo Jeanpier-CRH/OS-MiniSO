@@ -1,0 +1,6 @@
+{"runnerPid":37609,"runnerPpid":23705}
+{"pid":37610,"ppid":37609,"message":"process_child running","exitCode":0}
+{"pid":37611,"ppid":37609,"message":"process_child running","exitCode":3}
+{"pid":37610,"ppid":37609,"exitCode":0,"execFailed":false}
+{"pid":37611,"ppid":37609,"exitCode":3,"execFailed":false}
+{"pid":37612,"ppid":37609,"exitCode":42,"execFailed":true}

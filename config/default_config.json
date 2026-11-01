@@ -1,0 +1,14 @@
+{
+  "ramBytes": 134217728,
+  "pageSizeBytes": 4194304,
+  "swapPages": 64,
+  "quantum": 3,
+  "firstUserPid": 100,
+  "eventCapacity": 10000,
+  "systemProcessMemoryBytes": 4194304,
+  "oom": {
+    "weightMemory": 1.0,
+    "weightPriority": 2.0,
+    "protectSystemProcesses": true
+  }
+}
