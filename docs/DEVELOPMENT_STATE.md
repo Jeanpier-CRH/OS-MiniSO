@@ -2,7 +2,7 @@
 
 ## Fase actual
 
-Fase 1 (núcleo + consola) en implementación. Fase 2 (Qt) no iniciada.
+Fase 1 (núcleo + consola) validada mediante compilación y CTest. Fase 2 (Qt) no iniciada.
 
 ## Decisiones
 
@@ -15,6 +15,17 @@ Fase 1 (núcleo + consola) en implementación. Fase 2 (Qt) no iniciada.
 - Capacidad de respaldo = marcos libres + slots de swap libres. Si no alcanza, se dispara OOM simulado.
 - Process runner es un ejecutable separado; MiniSO lo lanza y lee JSON por stdout.
 - Productor-consumidor usa pthreads, mutex y cond reales.
+- La creación de procesos asigna primero memoria de partición y paginación; si alguna falla, se revierte y el proceso queda terminado sin memoria.
+- La recuperación de páginas libera el slot de swap correspondiente al completar la carga.
+
+## Estado de aceptación de Fase 1
+
+Validado en la rama `fix/correciones-de-codigo`:
+
+- Implementado y probado: compilación C++17/CMake, arranque, procesos 1–6, PID/PPID desde 100, árbol padre-hijo, terminación, Round Robin, particiones First-Fit, fusión, fragmentación externa, paginación, traducción, fragmentación interna, swap FIFO, recuperación de fallos, POSIX threads, proceso Linux auxiliar, OOM simulado, escenarios A–D, eventos exportables y consola.
+- Pruebas: 8 suites CTest/GoogleTest; 100% aprobadas.
+- Demo: `./build/miniso --demo` verifica procesos, pestañas, PageFault/MiniRenderer, MiniStress, productor-consumidor y `fork`/`exec`/`waitpid`.
+- Próxima fase: no iniciar Qt hasta que exista autorización explícita.
 
 ## Cómo continuar
 

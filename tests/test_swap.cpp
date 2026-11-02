@@ -26,6 +26,9 @@ TEST(Swap, FifoEvictionAndRecovery) {
     ASSERT_TRUE(paging.handlePageFault(2, 0).ok);
     auto recovered = paging.translate(2, 0);
     EXPECT_TRUE(recovered.ok);
+    auto recoveredTable = paging.pageTable(2);
+    ASSERT_TRUE(recoveredTable);
+    EXPECT_EQ(recoveredTable->entries[0].swapSlot, -1);
 }
 
 TEST(Swap, PinnedPageIsNotEvicted) {

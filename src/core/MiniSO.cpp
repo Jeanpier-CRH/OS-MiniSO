@@ -145,7 +145,12 @@ ValueResult<ProcessControlBlock> MiniSO::createProcess(const CreateProcessReques
         }
     }
     if (!mem.ok) {
+        scheduler_.dequeue(pid);
+        memory_.releaseProcessMemory(pid);
         processes_.markTerminated(pid, 1, "memory allocation failed");
+        if (request.parentPid != 0) {
+            processes_.removeChild(request.parentPid, pid);
+        }
         return ValueResult<ProcessControlBlock>::failure(mem.message);
     }
     syncProcessMemory(pid);

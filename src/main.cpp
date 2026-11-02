@@ -19,7 +19,10 @@ int main(int argc, char** argv) {
             system.boot();
             std::cout << system.runScenarioA() << '\n';
             std::cout << system.runScenarioB() << '\n';
+            std::cout << system.runScenarioC() << '\n';
             std::cout << system.runScenarioD() << '\n';
+            auto linuxDemo = system.runLinuxDemo();
+            std::cout << (linuxDemo.ok ? linuxDemo.value.rawOutput : linuxDemo.message) << '\n';
             std::cout << system.processTree();
             system.shutdown();
             return 0;

@@ -25,10 +25,11 @@ TEST(Partition, FirstFitSplitAndCoalesce) {
 
 TEST(Partition, ExternalFragmentation) {
     PartitionManager manager(100);
-    ASSERT_TRUE(manager.allocate(40, 1).ok);
-    ASSERT_TRUE(manager.allocate(40, 2).ok);
+    ASSERT_TRUE(manager.allocate(30, 1).ok);
+    ASSERT_TRUE(manager.allocate(30, 2).ok);
+    ASSERT_TRUE(manager.allocate(10, 3).ok);
     ASSERT_TRUE(manager.releaseByProcess(1).ok);
-    ASSERT_TRUE(manager.allocate(20, 3).ok);
+    ASSERT_TRUE(manager.releaseByProcess(3).ok);
     EXPECT_TRUE(manager.wouldFailDueToFragmentation(50));
     auto fail = manager.allocate(50, 4);
     EXPECT_FALSE(fail.ok);

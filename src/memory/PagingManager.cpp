@@ -66,7 +66,8 @@ ValueResult<PageTable> PagingManager::allocateProcess(int pid, std::size_t logic
     for (int i = 0; i < pages; ++i) {
         auto loaded = loadPage(pid, i);
         if (!loaded.ok) {
-            break;
+            releaseProcess(pid);
+            return ValueResult<PageTable>::failure(loaded.message);
         }
     }
     return ValueResult<PageTable>::success(tables_[pid]);
@@ -99,6 +100,10 @@ OperationResult PagingManager::loadPage(int pid, int pageNumber) {
     physical.free = false;
     physical.processId = pid;
     physical.pageNumber = pageNumber;
+    if (entry.swapSlot >= 0) {
+        swap_.release(entry.swapSlot);
+        entry.swapSlot = -1;
+    }
     entry.present = true;
     entry.frameNumber = frame;
     entry.referenced = true;
