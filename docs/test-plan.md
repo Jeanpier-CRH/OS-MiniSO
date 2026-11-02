@@ -18,3 +18,11 @@
 | I-02 | Linux demo | process_runner | ≥2 hijos | test_integration |
 
 Los resultados obtenidos se rellenan tras `ctest`.
+
+## Resultado registrado
+
+- Rama validada: `fix/correciones-de-codigo`
+- Comando: `cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DMINISO_BUILD_TESTS=ON`
+- Comando de pruebas: `ctest --test-dir build --output-on-failure`
+- Resultado: 8 suites ejecutadas, 8 aprobadas.
+- Demo: `./build/miniso --demo`
